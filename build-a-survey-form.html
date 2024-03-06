@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="styles.css" rel="stylesheet" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
+</head>
+
+<body>
+  <fieldset>
+    <h1 id="title">Henriks Spørreundersøkelse</h1>
+    <p id="description">En spørreundersøkelse om skandinavere bor i Norge</p>
+  </fieldset>
+  <form autocomplete="off" method="post" action="answers.html" id="survey-form">
+
+    <!--Spørsmål om hvem du er-->
+    <fieldset>
+      <label id="name-label" for="name">Hva heter du? <input id="name" type="text" required
+          placeholder="eks: Ola Normann" /></label>
+      <label for="dropdown"> Hvilket kjønn er du?
+        <select id="dropdown">
+          <option>velg et alternativ</option>
+          <option>Mann</option>
+          <option>Kvinne</option>
+          <option>Forvirret idiot</option>
+        </select>
+      </label>
+      <label id="email-label" for="email">Hva er Eposten din? <input id="email" type="email" required
+          placeholder="eks: olanormann@norge.no" /></label>
+      <label id="number-label" for="number">Hvor gammel er du? (valgfritt) <input id="number" type="number" min="13"
+          max="120" placeholder="eks: 45" /></label>
+    </fieldset>
+
+    <!--Spørsmål om land-->
+    <fieldset>
+      <label class="header">Hvilke land har du bodd i?</label>
+      <legend></legend>
+      <label class="checkbox" for="norge">Norge <input id="norge" type="checkbox" value="norge" /></label>
+      <label class="checkbox" for="sverige">Sverige <input id="sverige" type="checkbox" value="sverige" /></label>
+      <label class="checkbox" for="danmark">Danmark <input id="danmark" type="checkbox" value="danmark" /></label>
+      <label class="checkbox" for="finland">Finland <input id="finland" type="checkbox" value="finland" /></label>
+      <label class="checkbox" for="island">Island <input id="island" type="checkbox" value="island" /></label>
+      <label class="checkbox" for="outside">Utenfor Skandinavia <input id="outside" type="checkbox"
+          value="outside" /></label>
+      <legend class="header">Skal du utvandre?</legend>
+      <label for="residence-yes"><input id="residence-yes" name="residence" type="radio" value="emmigrate-yes">
+        Ja</label>
+      <label for="residence-no"><input id="residence-no" name="residence" type="radio" value="emmigrate-no" checked>
+        Nei</label>
+      <label>Hvor vil du flytte til? </label>
+      <input name="moving-to" type="text" placeholder="eks: USA">
+      <label>Hvorfor vil du flytte? </label>
+      <textarea name="why-moving" rows="5" cols="60" placeholder="eks: Jeg vil oppleve en annen kultur..."></textarea>
+    </fieldset>
+
+    <!--Formaliteter-->
+    <fieldset>
+      <label>Har du svart ærlig på spørsmålene? <input type="checkbox" value="honesty" required /></label>
+      <label>Har du lest og forstått informasjonserklæringen? <input type="checkbox" value="understood"
+          required /></label>
+      <input type="submit" id="submit" />
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
